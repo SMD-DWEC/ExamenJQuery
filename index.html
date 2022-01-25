@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Sergio Matamoros Delgado -->
+<html lang=es>
+
+<head>
+	<meta charset=utf-8 />
+	<meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta name=author content='mjaque@migueljaque.com' />
+	<title>Consulta de Multas</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+
+	<!-- JQuery UI -->
+	<script src="src/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script> 
+	<link rel="stylesheet" href="src/jquery-ui-1.13.1.custom/jquery-ui.min.css"/> 
+
+	<!-- CSS -->
+	<link rel=stylesheet href=css/reset.css />
+	<link rel=stylesheet href=css/ex_js.css />
+</head>
+
+<body>
+	<h1>Consulta de Multas</h1>
+	<p>Este formulario le permite consultar las multas de tráfico de un conductor:</p>
+	<div id="dialog" title="Error">
+		<p>Hay algunos campos que no están rellenos.</p>
+	</div>
+	<form>
+		<label for=iNombre>Nombre</label>
+		<input type=text id=iNombre />
+		<label for=iApellidos>Apellidos</label>
+		<input type=text id=iApellidos />
+		<br />
+		<label for=iDni>DNI</label>
+		<input type=text id=iDni />
+		<label for=iFechaNacimiento>Fecha de Nacimiento</label>
+		<input type=text name="date" id=iFechaNacimiento />
+		<br />
+		<select id="coches">
+			<optgroup label="Mercedes">
+				<option value="Mercedes AMG G65">Mercedes AMG G65</option>
+				<option value="Mercedes GLC">Mercedes GLC</option>
+			</optgroup>
+			<optgroup label="Ford">
+				<option value="Ford Mustang">Ford Mustang</option>
+				<option value="Ford Mustang Eleanor 1967">Ford Mustang Eleanor 1967</option>
+			</optgroup>
+			<optgroup label="Jeep">
+				<option value="Jeep Wrangler">Jeep Wrangler</option>
+				<option value="Jeep Compass">Jeep Compass</option>
+			</optgroup>
+		</select>
+		<button>Buscar</button>
+	</form>
+	<hr />
+	
+	<h2>Resultados de la Búsqueda</h2>
+	<ol>
+		<!--<li>Multa por exceso de velocidad - 300€</li>
+		<li>Multa por embiraguez - 237€</li>-->
+	</ol>
+	<script type=module src=js/ex_js.js></script>
+</body>
+
+</html>
